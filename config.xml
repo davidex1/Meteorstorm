@@ -15,19 +15,19 @@
    
    <preference name = "FullScreen" value = "True"/>
    
-   <icon src = "res/icon/android/mipmap-ldpi/ic_launcher.png" 
+   <icon src = "res/icon/android/mipmap-ldpi/tp_icon.png" 
       gap:platform = "android" gap:qualifier = "ldpi" />
 		
-   <icon src = "res/icon/android/mipmap-mdpi/ic_launcher.png" 
+   <icon src = "res/icon/android/mipmap-mdpi/tp_icon.png" 
       gap:platform = "android" gap:qualifier = "mdpi" />
 		
-   <icon src = "res/icon/android/mipmap-hdpi/ic_launcher.png" 
+   <icon src = "res/icon/android/mipmap-hdpi/tp_icon.png" 
       gap:platform = "android" gap:qualifier = "hdpi" />
 		
-   <icon src = "res/icon/android/mipmap-xhdpi/ic_launcher.png" 
+   <icon src = "res/icon/android/mipmap-xhdpi/tp_icon.png" 
       gap:platform = "android" gap:qualifier = "xhdpi" />
 		
-   <icon src = "res/icon/android/mipmap-xxhdpi/ic_launcher.png" 
+   <icon src = "res/icon/android/mipmap-xxhdpi/tp_icon.png" 
       gap:platform = "android" gap:qualifier = "xxhdpi" />
    
    <icon src = "res/icon/ios/Icon-App-57x57@1x.png" gap:platform = "ios" width = "57" height = "57" />
