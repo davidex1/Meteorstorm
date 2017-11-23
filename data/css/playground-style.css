@@ -1,0 +1,41 @@
+/* gdy wrzucam linki to ścieżka relatywna
+ do pliku css a nie html !! */
+
+ * {
+   margin: 0px;
+   padding: 0px;
+}
+
+body {
+    background-image: url(img/bgd.jpg);
+    animation: 50s scroll infinite linear;
+    overflow: hidden;
+    width: 100vw;
+         
+}
+
+#ship {
+    
+    background-image: url(img/ship.png);
+    background-repeat: no-repeat;
+    
+    display: block;
+    position: fixed;
+    top: 80%;
+    left: 37%;
+    
+	width: 0;
+	height: 0;
+	border-left: 0px solid transparent;
+	border-right: 150px solid transparent;
+	border-bottom: 1500px solid transparent;
+    
+    
+    
+}
+
+@keyframes scroll {
+    100% {
+        background-position: 0px 3000px;
+    }
+}
