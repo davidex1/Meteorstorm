@@ -1,21 +1,62 @@
 window.onload = function () {
 
-    var ship = document.getElementById("ship");
-
-    ship.addEventListener("touchmove", swipe);
+    // defining basic elements of the game
+    var ship = document.getElementById("ship")
+    var ground = document.getElementById("playground");
     
-    function swipe(ev) {
-        
-    var borderL = 0;
-    var borderR = outerWidth - outerWidth * 0.26;
+    // script for ship movement
+    ground.addEventListener("touchmove", shipMove);
     
-    ev.preventDefault();
+    function shipMove(ev) {
         
-    var touch = ev.targetTouches[0];
-    var x = touch.clientX;
+        var borderL = 0;
+        var borderR = outerWidth - outerWidth * 0.26;
+    
+        ev.preventDefault();
         
-    if (touch.clientX > borderL && touch.clientX < borderR) {
-    ship.style.left = x + "px";
+        var touch = ev.targetTouches[0];
+        var x = touch.clientX;
+        
+        if (touch.clientX > borderL && touch.clientX < borderR) {
+        ship.style.left = x + "px";
         }
     }
+    
+    // defining meteor elements
+    var meteors = [
+        document.getElementById("meteor1"),
+        document.getElementById("meteor2"),
+        document.getElementById("meteor3"),
+        document.getElementById("meteor4"),
+        document.getElementById("meteor5"),
+        document.getElementById("meteor6")
+    ]
+    
+    //script for falling meteors
+    var randMeteor = meteors[Math.floor(Math.random()*meteors.length)];
+    
+    function fall() {
+        randMeteor.className += " meteorDown";
+    }
+    
+    // script for falling meteors loop
+    ground.addEventListener("touchstart", fallLoop);
+    
+    /* loop in progress :)
+    
+    function fallLoop() {
+        while (true) {
+            if ()
+        
+            else
+                fall()
+            }
+                        
+    }*/ 
+    
+
+    
+    
+    
+    
 }
