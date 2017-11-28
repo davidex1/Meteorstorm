@@ -36,14 +36,6 @@ html, body {
     }
 }
 
-@keyframes down {
-    0% {top: 5px;
-    }
-    100% {
-        top: 2000px;
-    }
-}
-
 .meteor {
     display: inline-block;
     background-color: dimgray;
@@ -51,13 +43,9 @@ html, body {
     width: 8vh;
     height: 8vh;
     position: relative;
-    
+    top: -85px;    
 }
 
 #meteor1 {
     margin-left: 5%;
-}
-
-.meteorDown {
-    animation: 10s down linear;
 }
