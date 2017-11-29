@@ -11,7 +11,7 @@ window.onload = function movement() {
     function shipMove(ev) {
         
         var borderL = 0;
-        var borderR = outerWidth - outerWidth * 0.26;
+        var borderR = outerWidth - outerWidth * 0.20;
         
         var x = ev.clientX - 50;
         
