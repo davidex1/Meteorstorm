@@ -5,21 +5,18 @@ window.onload = function movement() {
     var ground = document.getElementById("playground");
     
     // script for ship movement
-    ground.addEventListener("touchmove", shipMove);
+    ground.addEventListener("mousemove", shipMove);
     
     function shipMove(ev) {
         
         var borderL = 0;
         var borderR = outerWidth - outerWidth * 0.26;
-    
-        ev.preventDefault();
         
-        var touch = ev.targetTouches[0];
-        var x = touch.clientX;
-        
-        if (touch.clientX > borderL && touch.clientX < borderR) {
+        var x = ev.clientX;
+
+        if (x > borderL && x < borderR) {
         ship.style.left = x + "px";
-        }
+        } 
     }
 }
     
@@ -41,7 +38,7 @@ window.addEventListener("touchstart", fallLoop);
     function fall() {
         var randMeteor = meteors[Math.floor(Math.random()*meteors.length)];
         var pos = 0;
-        var id = setInterval(frame, 1);
+        var id = setInterval(frame, 0.5);
         function frame() {
             if (pos == 1000) {
                 clearInterval(id);
@@ -53,15 +50,9 @@ window.addEventListener("touchstart", fallLoop);
         }
     }
         
-    fall();
-
+    setTimeout(fall(), 3000);
+    setInterval(fall(), 3000);
     
-    }
-            
-     /*   var i = 0;
-    while (i<100) {
-        fall();
-        i++;
     }
 
 // positions of ship and meteors
