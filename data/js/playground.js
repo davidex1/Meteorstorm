@@ -4,19 +4,36 @@ window.onload = function movement() {
     var ship = document.getElementById("ship");
     var ground = document.getElementById("playground");
     
-    // script for ship movement
+    // scripts for ship movement
     ground.addEventListener("mousemove", shipMove);
+    ground.addEventListener("touchmove", shipMoveTouch);
     
     function shipMove(ev) {
         
         var borderL = 0;
         var borderR = outerWidth - outerWidth * 0.26;
         
-        var x = ev.clientX;
+        var x = ev.clientX - 50;
+        
+        ev.preventDefault();
 
         if (x > borderL && x < borderR) {
-        ship.style.left = x + "px";
+            ship.style.left = x + "px";
         } 
+    }
+    
+    function shipMoveTouch(evt) {
+        var borderL = 50;
+        var borderR = outerWidth - outerWidth * 0.26;
+    
+        evt.preventDefault();
+        
+        var touch = evt.targetTouches[0];
+        var x = touch.clientX - 50;
+        
+        if (touch.clientX > borderL && touch.clientX < borderR) {
+            ship.style.left = x + "px";
+        }
     }
 }
     
@@ -83,5 +100,4 @@ window.addEventListener("touchstart", fallLoop);
                     break;
                 }
             }
-        } */
-                        
+        } */                       
