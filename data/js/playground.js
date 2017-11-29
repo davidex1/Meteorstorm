@@ -15,20 +15,18 @@ window.onload = function movement() {
         
         var x = ev.clientX - 50;
         
-        ev.preventDefault();
 
         if (x > borderL && x < borderR) {
             ship.style.left = x + "px";
         } 
     }
     
-    function shipMoveTouch(evt) {
+    function shipMoveTouch(ev) {
         var borderL = 50;
         var borderR = outerWidth - outerWidth * 0.26;
     
-        evt.preventDefault();
         
-        var touch = evt.targetTouches[0];
+        var touch = ev.targetTouches[0];
         var x = touch.clientX - 50;
         
         if (touch.clientX > borderL && touch.clientX < borderR) {
