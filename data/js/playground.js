@@ -1,5 +1,5 @@
 window.onload = function movement() {
-
+    
     // defining basic elements of the game
     var ship = document.getElementById("ship");
     var ground = document.getElementById("playground");
@@ -10,22 +10,23 @@ window.onload = function movement() {
     
     function shipMove(ev) {
         
+        var R = window.innerWidth;
         var borderL = 0;
-        var borderR = outerWidth - outerWidth * 0.20;
+        var borderR = R - 100;
         
         var x = ev.clientX - 50;
         
-
         if (x > borderL && x < borderR) {
             ship.style.left = x + "px";
         } 
     }
     
     function shipMoveTouch(ev) {
-        var borderL = 50;
-        var borderR = outerWidth - outerWidth * 0.26;
-    
         
+        var R = window.innerWidth;
+        var borderL = 50;
+        var borderR = R - 50;
+    
         var touch = ev.targetTouches[0];
         var x = touch.clientX - 50;
         
