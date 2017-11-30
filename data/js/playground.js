@@ -1,4 +1,11 @@
-window.onload = function movement() {
+function start() {
+    movement();
+    fallLoop();
+}
+
+window.onload = start;
+
+function movement() {
     
     // defining basic elements of the game
     var ship = document.getElementById("ship");
@@ -26,7 +33,7 @@ window.onload = function movement() {
         var R = window.innerWidth;
         var borderL = 50;
         var borderR = R - 50;
-    
+        ev.preventDefault();
         var touch = ev.targetTouches[0];
         var x = touch.clientX - 50;
         
@@ -35,39 +42,34 @@ window.onload = function movement() {
         }
     }
 }
-    
-    
-window.addEventListener("touchstart", fallLoop);
 
-    
-    function fallLoop() {
+function fallLoop() {
         
     var meteors = [
-        document.getElementById("meteor1"),
-        document.getElementById("meteor2"),
-        document.getElementById("meteor3"),
-        document.getElementById("meteor4"),
-        document.getElementById("meteor5"),
-        document.getElementById("meteor6")]
+    document.getElementById("meteor1"),
+    document.getElementById("meteor2"),
+    document.getElementById("meteor3"),
+    document.getElementById("meteor4"),
+    document.getElementById("meteor5"),
+    document.getElementById("meteor6")];
 
-    
     function fall() {
         var randMeteor = meteors[Math.floor(Math.random()*meteors.length)];
         var pos = 0;
         var id = setInterval(frame, 0.5);
+        
         function frame() {
             if (pos == 1000) {
                 clearInterval(id);
-                } 
+            } 
             else {
                 pos++; 
                 randMeteor.style.top = pos + 'px';  
-                }
+            }
         }
     }
         
-    setTimeout(fall(), 3000);
-    setInterval(fall(), 3000);
+    setInterval(fall, 5000);
     
     }
 

@@ -9,7 +9,7 @@ html, body {
 }
 
 #playground {
-    background-image: url(img/bgd.jpg);
+    background: linear-gradient(90deg, #3a3630, #4f4341);
     animation: 50s scroll infinite linear;
     overflow: hidden;
     width: 100vw;
@@ -27,7 +27,7 @@ html, body {
 	height: 0;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
-	border-bottom: 50px solid gray;
+	border-bottom: 50px solid #b6b7ba;
 }
 
 @keyframes scroll {
@@ -38,14 +38,34 @@ html, body {
 
 .meteor {
     display: inline-block;
-    background-color: dimgray;
+    background-color: #dba6a6;
     border-radius: 50%;
     width: 8vh;
-    height: 8vh;
+    height: 8%;
     position: relative;
-    top: -85px;    
+    top: -85px;
+    box-shadow: 0px -8px 30px 5px #cc1a1a;
+    margin-left: inherit;
 }
 
 #meteor1 {
     margin-left: 5%;
+}
+
+@media (min-width: 490px) {
+    .meteor {
+        margin-left: 5%;
+    }
+}
+
+@media (min-width: 700px) {
+    .meteor {
+        margin-left: 9%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .meteor {
+        margin-left: 11%;
+    }
 }
