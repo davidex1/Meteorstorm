@@ -29,8 +29,10 @@
     }
   ],
   "start_url": "/index.html",
-  "display": "standalone",
-  "orientation": "landscape"
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "theme_color": "#4f4341",
+  "background_color": "#4f4341"
 }
 
 
