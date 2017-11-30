@@ -52,7 +52,7 @@ html, body {
     margin-left: 5%;
 }
 
-@media (min-width: 490px) {
+@media (min-width: 500px) {
     .meteor {
         margin-left: 5%;
     }
