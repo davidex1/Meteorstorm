@@ -69,7 +69,7 @@ function fallLoop() {
         }
     }
         
-    setInterval(fall, 5000);
+    setInterval(fall, 3000);
     
     }
 
