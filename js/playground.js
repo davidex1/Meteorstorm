@@ -46,8 +46,6 @@ function movement() {
 
 function fallLoop() {
     
-    var ship = document.getElementById("ship");
-    
     var meteors = [
     document.getElementById("meteor1"),
     document.getElementById("meteor2"),
@@ -72,11 +70,19 @@ function fallLoop() {
         }
     }
 
-    var falling = setInterval(fall, 3000);
+    var falling = setInterval(fall, 2500);
 
 }
 
 function collision() {
+    
+    var i = 0;
+    function counter() {
+        document.getElementById("counter").innerHTML = "Score: " + i;
+        i++;
+    }
+    
+    var counterStart = setInterval(counter, 1000);
     
     function getPosition() {
         
@@ -115,6 +121,8 @@ function collision() {
                 $(".clickHide").click (function(){
                     $("#menu").css("visibility","hidden");
                 }); 
+                
+                clearInterval(counterStart);
             }
     }
     
