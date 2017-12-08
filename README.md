@@ -11,7 +11,7 @@
 * Collision detection
 
 [Click to play ](https://davidex1.github.io/meteorstorm/index.html) in browser
-or download .apk (created in PhoneGap) file from repository and try it on your android.
+or download .apk file (created in PhoneGap) from repository and try it on your android.
 
 #### Gallery:
 View from Samsung Galaxy S7 and MacBook Air 13"
