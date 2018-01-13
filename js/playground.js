@@ -1,4 +1,4 @@
-function start() {
+function start() {  
     movement();
     fallLoop();
     collision();
@@ -6,18 +6,17 @@ function start() {
 
 window.onload = start;
 
-function movement() {
+function movement() { // contains movement functions for mouse and touchscreen
 
-    // defining basic elements of the game
     var ship = document.getElementById("ship");
     var ground = document.getElementById("playground");
 
-    // scripts for ship movement
     ground.addEventListener("mousemove", shipMove);
     ground.addEventListener("touchmove", shipMoveTouch);
     
     function shipMove(ev) {
-
+        
+        // borders of movement
         var R = window.innerWidth;
         var borderL = 0;
         var borderR = R - 100;
@@ -25,7 +24,7 @@ function movement() {
         var x = ev.clientX - 50;
 
         if (x > borderL && x < borderR) {
-            ship.style.left = x + "px";
+            ship.style.left = x + "px"; // add a mouse position as a style to css
         }
     }
 
@@ -44,7 +43,7 @@ function movement() {
     }
 }
 
-function fallLoop() {
+function fallLoop() { 
     
     var meteors = [
     document.getElementById("meteor1"),
@@ -54,12 +53,14 @@ function fallLoop() {
     document.getElementById("meteor5"),
     document.getElementById("meteor6")];
 
-    function fall() {
+    function fall() { 
+        // selecting a random meteor from array to fall down
         var randMeteor = meteors[Math.floor(Math.random()*meteors.length)];
         var pos = 0;
         var id = setInterval(frame, 0.5);
 
         function frame() {
+            //animation of falling
             if (pos == 1000) {
                 clearInterval(id);
             }
@@ -74,10 +75,10 @@ function fallLoop() {
 
 }
 
-function collision() {
+function collision() { 
     
     var i = 0;
-    function counter() {
+    function counter() { // score counter connected with collision detection
         document.getElementById("counter").innerHTML = "Score: " + i;
         i++;
     }
@@ -85,15 +86,15 @@ function collision() {
     var counterStart = setInterval(counter, 1000);
     
     function getPosition() {
-        
+        // position of ship
         var shipL = $("#ship").offset().left,
             shipR = $("#ship").offset().left + 100,
             shipT = $("#ship").offset().top,
             shipB = $("#ship").offset().top + 50;
-    
+        // size of meteors
         var meteorW = $("#meteor1").width();
         var meteorH = $("#meteor1").height();
-    
+        // position of meteors
         var meteor1L = $("#meteor1").offset().left + meteorW/2,
             meteor1B = $("#meteor1").offset().top + meteorH;
         var meteor2L = $("#meteor2").offset().left + meteorW/2,
@@ -108,7 +109,7 @@ function collision() {
             meteor6B = $("#meteor6").offset().top + meteorH;
 
         
-    
+        // collision handler - after crashing a ship with any meteor it shows game over menu
         if ((shipL < meteor1L && meteor1L < shipR && meteor1B > shipT && meteor1B < shipB) ||
             (shipL < meteor2L && meteor2L < shipR && meteor2B > shipT && meteor2B < shipB) ||
             (shipL < meteor3L && meteor3L < shipR && meteor3B > shipT && meteor3B < shipB) ||
@@ -121,7 +122,7 @@ function collision() {
                 $(".clickHide").click (function(){
                     $("#menu").css("visibility","hidden");
                 }); 
-                
+                // stop counter when collision detected
                 clearInterval(counterStart);
             }
     }

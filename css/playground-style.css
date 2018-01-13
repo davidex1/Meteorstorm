@@ -1,17 +1,18 @@
- * {
+@font-face {
+    font-family: Nasalization;
+    src: url(fonts/nasalization-rg.ttf);
+}
+
+* {
     margin: 0px;
     padding: 0px;
+    font-family: Nasalization;
     text-decoration: none;
 }
 
 html, body {
     height: 100%;
     display: flex;
-}
-
-@font-face {
-    font-family: Nasalization;
-    src: url(fonts/nasalization-rg.ttf);
 }
 
 #playground {
@@ -22,15 +23,13 @@ html, body {
 }
 
 #ship {
-    box-shadow: 0px 25px 20px -15px #8fedfb;
-    
     display: block;
     position: fixed;
     top: 85%;
     left: 37%;
-    
 	width: 0;
 	height: 0;
+    box-shadow: 0px 25px 20px -15px #8fedfb;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
 	border-bottom: 50px solid #b6b7ba;
@@ -60,7 +59,6 @@ html, body {
 
 #menu p {
     text-align: center;
-    font-family: Nasalization;
     font-size: 25px;
     color: white;
 }
@@ -68,14 +66,11 @@ html, body {
 #menu a {
     display: block;
     text-align: center;
-    font-family: Nasalization;
     font-size: 18px;
-    
     width: 20%;
     margin: 0 auto;
     margin-top: 5px;
     padding: 10px;
-    
     text-shadow: 0px 0px 10px red;
     color: white;
     background: rgba(240, 240, 240, 0.5);
@@ -87,7 +82,6 @@ html, body {
 }
 
 #counter {
-    font-family: Nasalization;
     color: white;
     font-size: 25px;
     position: relative;

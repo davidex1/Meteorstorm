@@ -1,6 +1,12 @@
- * {
+@font-face {
+    font-family: Nasalization;
+    src: url(fonts/nasalization-rg.ttf);
+} 
+
+* {
    margin: 0px;
    padding: 0px;
+   font-family: Nasalization;
 
  }
 
@@ -10,19 +16,12 @@ body {
     height: 100%;
 }
 
-@font-face {
-    font-family: Nasalization;
-    src: url(fonts/nasalization-rg.ttf);
-}
-
 h2 {
+    margin-top: 250px;
     text-align: center;
-    font-family: Nasalization;
     font-size: 35px;
     color: white;
-    text-shadow: 0px 0px 10px red;
-    
-    margin-top: 250px;
+    text-shadow: 0px 0px 10px red;   
 }
 
 #menu {
@@ -35,14 +34,11 @@ a {
     margin: 20px auto;
     padding: 15px 30px;
     width: 50%;
-
-    font-family: Nasalization;
     font-size: 25px;
     text-align: center;
     text-decoration: none;
     text-shadow: 0px 0px 10px red;
     color: white;
-
     background: rgba(240, 240, 240, 0.5);
     border-radius: 10px;
 }
