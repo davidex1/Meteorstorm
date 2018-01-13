@@ -11,7 +11,7 @@
 * Collision detection
 
 #### To fix:
-* RWD on big screens (above 15")
+* RWD of meteor elements on big screens (above 15")
 * Touchmove on Safari Mobile
 
 [Click to play ](https://davidex1.github.io/meteorstorm/index.html) in browser
