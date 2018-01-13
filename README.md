@@ -2,13 +2,17 @@
 
 ### This is my first web project I made for exercising skills.
 
-### A simple game created with HTML5, CSS3 and pure Javascript.
+### A simple game created with HTML5, CSS3, pure Javascript and a bit of jQuery.
 
 #### Main features:
 * Movement for mouse and touchscreen devices
 * Function for animate and random falling meteors
 * Score counter 
 * Collision detection
+
+#### To fix:
+* RWD on big screens (above 15")
+* Touchmove on Safari Mobile
 
 [Click to play ](https://davidex1.github.io/meteorstorm/index.html) in browser
 or download .apk file (created in PhoneGap) from release and try it on your android.
