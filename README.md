@@ -2,7 +2,7 @@
 
 ### This is my first web project I made for exercising skills.
 
-### A simple game created with HTML5, CSS3, pure Javascript and a bit of jQuery.
+### A simple game created with HTML, CSS, Javascript with a bit of jQuery.
 
 #### Main features:
 * Movement for mouse and touchscreen devices
