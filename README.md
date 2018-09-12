@@ -14,8 +14,7 @@
 * RWD of meteor elements on big screens (above 15")
 * Touchmove on Safari Mobile
 
-[Click to play ](https://davidex1.github.io/Meteorstorm/) in browser
-or download .apk file (created in PhoneGap) from release and try it on your android.
+[Download ](https://github.com/davidex1/meteorstorm/releases) .apk file (created in PhoneGap) from release and try it on your android.
 
 #### Gallery:
 View from Samsung Galaxy S7 and MacBook Air 13"
